@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guest List App - Table View</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Guest List Entries</h1>
+    <table id="guestTable">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>First Person</th>
+          <th>Second Person</th>
+          <th>Party Size</th>
+          <th>Phone 1</th>
+          <th>Phone 2</th>
+          <th>Tonight Clubs</th>
+          <th>Tomorrow Pools</th>
+          <th>Tomorrow Night Clubs</th>
+          <th>Hotel</th>
+          <th>Date Leaving</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <br>
+    <a href="index.html">Back to Homepage</a>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="table.js"></script>
+</body>
+</html>
