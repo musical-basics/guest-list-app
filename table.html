@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Guest List App - Table View</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-  <div class="container">
+  <div class="container table-container">
     <h1>Guest List Entries</h1>
     <table id="guestTable">
       <thead>
@@ -26,12 +28,17 @@
       <tbody></tbody>
     </table>
     <br>
+    <button id="exportButton">Export Excel File</button>
+    <br>
     <a href="index.html">Back to Homepage</a>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="table.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="table.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  <script src="export.js"></script>
 </body>
+
 </html>

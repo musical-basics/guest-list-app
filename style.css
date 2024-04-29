@@ -14,6 +14,10 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.container.table-container {
+    max-width: 1100px;
+}
+
 h1 {
     text-align: center;
     color: #333;
@@ -78,19 +82,25 @@ button[type="submit"]:hover {
     margin-top: 5px;
 }
 
+/* ... existing styles ... */
+
 table {
     width: 100%;
     border-collapse: collapse;
-  }
-  
-  th, td {
+    background-color: #fff;
+}
+
+th,
+td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  
-  th {
+}
+
+th {
     background-color: #f2f2f2;
-  }
-  
-  
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

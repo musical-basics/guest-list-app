@@ -1,21 +1,27 @@
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
-
+console.log("table.js: Script started");
 
 // Get a reference to the database
-var database = firebase.database();
+console.log("table.js: Getting database reference");
+const database = firebase.database();
 
 // Get a reference to the table body
-var tableBody = document.querySelector('#guestTable tbody');
+console.log("table.js: Getting table body reference");
+const tableBody = document.querySelector('#guestTable tbody');
 
 // Retrieve data from Firebase and populate the table
-database.ref('guestList').on('value', function(snapshot) {
+console.log("table.js: Retrieving data from Firebase");
+database.ref('guestList').on('value', (snapshot) => {
+  console.log("table.js: Data snapshot received");
+
   // Clear the table body
   tableBody.innerHTML = '';
 
   // Loop through the data and append rows to the table
-  snapshot.forEach(function(childSnapshot) {
-    var data = childSnapshot.val();
-    var row = document.createElement('tr');
+  snapshot.forEach((childSnapshot) => {
+    const data = childSnapshot.val();
+    console.log("table.js: Child data:", data);
+
+    const row = document.createElement('tr');
     row.innerHTML = `
       <td>${data.timestamp}</td>
       <td>${data.firstName}</td>
@@ -23,12 +29,17 @@ database.ref('guestList').on('value', function(snapshot) {
       <td>${data.partySize}</td>
       <td>${data.phone1}</td>
       <td>${data.phone2}</td>
-      <td>${data.tonightClubs ? data.tonightClubs.join(', ') : ''}</td>
-      <td>${data.tomorrowPools ? data.tomorrowPools.join(', ') : ''}</td>
+      <td>${Array.isArray(data.tonightClubs) ? data.tonightClubs.join(', ') : ''}</td>
+      <td>${Array.isArray(data.tomorrowPools) ? data.tomorrowPools.join(', ') : ''}</td>
       <td>${data.tomorrowNightClubs}</td>
       <td>${data.hotel}</td>
       <td>${data.dateLeaving}</td>
     `;
     tableBody.appendChild(row);
+    console.log("table.js: Row appended to table");
   });
+
+  console.log("table.js: Data retrieval and table population completed");
 });
+
+console.log("table.js: Script execution completed");
