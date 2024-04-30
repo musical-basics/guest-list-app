@@ -62,6 +62,37 @@ select {
     flex: 1;
     margin-right: 10px;
 }
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+
+.button.secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+.button.secondary:hover {
+    background-color: #bbb;
+}
 
 button[type="submit"] {
     background-color: #4CAF50;
@@ -72,11 +103,29 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 button[type="submit"]:hover {
     background-color: #45a049;
 }
+
+button[type="exportButton"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="exportButton"]:hover {
+    background-color: #45a049;
+}
+
 
 #otherHotel {
     margin-top: 5px;

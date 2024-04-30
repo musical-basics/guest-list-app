@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Guest List Form</title>
+    <title>Lionel's Guest List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
@@ -28,7 +28,7 @@
 
 <body>
     <div class="container">
-        <h1>Guest List Form</h1>
+        <h1>Lionel's Guest List</h1>
         <form id="guestListForm">
             <div class="form-group">
                 <label for="firstName">First Person Full Name:</label>
@@ -123,9 +123,12 @@
                 <label for="dateLeaving">Date Leaving Vegas:</label>
                 <input type="date" id="dateLeaving" name="dateLeaving">
             </div>
-            <button type="submit">Submit</button>
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <a href="index.html" class="button secondary">Back to Homepage</a>
+            </div>
         </form>
-        <a href="index.html">Back to Homepage</a>
+        <!-- <a href="index.html">Back to Homepage</a> -->
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>

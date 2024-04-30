@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     var formData = {
-      timestamp: timestamp
+      timestamp: timestamp,
+      exportedStatus: false
     };
     if (firstName !== '') formData.firstName = firstName;
     if (secondName !== '') formData.secondName = secondName;
@@ -46,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (phone2 !== '') formData.phone2 = phone2;
     if (tonightClubs.length > 0) formData.tonightClubs = tonightClubs;
     if (tomorrowPools.length > 0) formData.tomorrowPools = tomorrowPools;
-    if (tomorrowNightClubs !== '') formData.tomorrowNightClubs = tomorrowNightClubs;
+    if (tomorrowNightClubs.length > 0) formData.tomorrowNightClubs = tomorrowNightClubs;
+    // if (tomorrowNightClubs !== '') formData.tomorrowNightClubs = tomorrowNightClubs;
     if (hotel !== '') {
       formData.hotel = hotel;
       if (hotel === 'Other' && otherHotel !== '') {
